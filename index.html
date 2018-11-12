@@ -18,12 +18,34 @@
 			<h1 id = "Monotype"> Web Dictionary </h1>
 		</div>
 		
+		
 		<br>
 		<br>
 		
+		
 		<div id = "search" >
+			<p> Lookup the definition of a word (e.g. ajax, html, bar, php, javascript or css) </p>
+		
+		<br>
+		
+		<form action = "/request.php">
+			<input type = "text" name = "word" value = "ajax">		
 			<button type = "search button" onclick = "getRequest()" > Search </button>
+			
 		</div>
+		
+		
+		<br>
+		
+		
+		<hr size = "1" color = "darkgrey" >
+		
+		
+		<div id = "result" >
+			<h2> Result </h2>
+		</div>
+		
+		
 
 	</body>
 	
