@@ -6,8 +6,10 @@
 
 .heading{
 	text-align: center;
+	color: white;
 	background-color: #32a4ae;
 	border: 5px outset grey;
+	border-radius: 10px;
 	height: 100px;
 	padding-top: 15px;
 	padding-bottom: 10px;
