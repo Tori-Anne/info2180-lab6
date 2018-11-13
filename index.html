@@ -15,37 +15,37 @@
 	<body>
 	
 		<div class = "heading" >
-			<h1 id = "Monotype"> Web Dictionary </h1>
+			<h1 id = "Monotype" > Web Dictionary </p>
 		</div>
 		
-		
 		<br>
 		<br>
-		
 		
 		<div id = "search" >
-			<h4> Lookup the definition of a word (e.g. ajax, html, bar, php, javascript or css) </h4>
+			<h3> Lookup the definition of a word (e.g. ajax, html, bar, php, javascript or css) </h3>
 		
-		<br>
-		
-		<form action = "/request.php">
-			<input type = "text" name = "word" value = "ajax">		
-			<button type = "search button" onclick = "getRequest()" > Search </button>
+			<form onsubmit = "getRequest()" method = "get">
+				<input type = "text" name = "word" value = "ajax" required />		
+				<button type = "submit" id = "result" > Search </button>
+			</form>
 			
 		</div>
 		
 		
 		<br>
-		
-		
+				
 		<hr size = "1" color = "darkgrey" >
 		
+		<br>
+		<br>
 		
 		<div id = "result" >
 			<h3> Result </h3>
+			
 		</div>
 		
-		
+	
+				
 
 	</body>
 	
