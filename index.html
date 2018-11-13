@@ -24,9 +24,9 @@
 		<div id = "search" >
 			<h3> Lookup the definition of a word (e.g. ajax, html, bar, php, javascript or css) </h3>
 		
-			<form onsubmit = "getRequest()" method = "get">
-				<input type = "text" name = "word" value = "ajax" required />		
-				<button type = "submit" id = "result" > Search </button>
+			<form>
+				<input type = "text" id = "a_word" required >
+				<button type = "submit" onclick = "getRequest()" > Search </button>
 			</form>
 			
 		</div>
@@ -39,8 +39,8 @@
 		<br>
 		<br>
 		
+		<h3> Result </h3>
 		<div id = "result" >
-			<h3> Result </h3>
 			
 		</div>
 		
