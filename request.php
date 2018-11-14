@@ -15,7 +15,7 @@ $definition = [
 ];
 
 
-if ($query = $_GET['all']) {
+if ($query = $_GET['all'] == true) {
 	$xmldata = '<?xml version = "1.0" encoding = "UTF-8"?' > 
 	<entries>
 		<definition name = "definition" author = "Matthew" >
