@@ -27,19 +27,32 @@ window.onload = function() {
 		requestTwo.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				var xmlDoc = requestTwo.responseXML;
+				var definitonsList = document.createElement("OL");
 				var results = xmlDoc.getElementsByTagName("definition");
 				
 				for (var i = 0; i < results.length; i++) {
 					var definition = document.createElement("LI");
-					var heading3 = document.createElement("H3");
-					var para1 = document.createElement("P");
-					var para2 = document.createElement("P");
 					
-					//var defName = document.createTextNode(results[i].get
+					var heading3 = document.createElement("H3");
+					var defName = document.createTextNode(results[i].getAttribute("name"));
+					heading3.appendChild(defName);
+					
+					var para1 = document.createElement("P");
+					var defText = document.createTextNode(results[i].childNodes[0].nodeValue);
+					para1.appendChild(defText);
+					
+					var para2 = document.createElement("P");
+					var dash_author = document.createTextNode("-" + results[i].getAttribute("author"));
+					para2.appendChild(dash_author);
+					
+					definition.appendChild(heading3);
+					definition.appendChild(para1);
+					definition.appendChild(para2);
+					
+					definitonsList.appendChild(definition);
+				}			
 				
-				
-				
-				document.getElementById("result").innerHTML = requestTwo.responseText;
+				document.getElementById("result").appendChild(definitonsList);
 			}
 			else {
 				alert('There was a problem with the request.');
@@ -53,10 +66,3 @@ window.onload = function() {
 	
 	
 };
-
-
-
-
-// Create an ordered list (ol) of deﬁnitions 
-// to insert into the result div, using the DOM (document.createElement).
-
